@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    {% block css %} {% endblock %}
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Beats_Electronics_logo.svg/2048px-Beats_Electronics_logo.svg.png" alt="">
+            </a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#specs" class="nav__link">Specs</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#case" class="nav__link">Case</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                </ul>
+    
+                <div class="nav__close" id="nav-close">
+                    <iconify-icon icon="ri:function-line"></iconify-icon>
+                </div>
+            </div>
+    
+            <div class="nav__toggle" id="nav-toggle">
+                <iconify-icon icon="ri:function-fill"></iconify-icon>
+
+            </div>
+        </nav>
+    </header>
+    {% block content %} {% endblock %}
+
+<footer class="footer section">
+	<div class="footer__container container grid">
+		<a href="#" class="footer__logo">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Beats_Electronics_logo.svg/2048px-Beats_Electronics_logo.svg.png" alt="">
+		</a>
+
+		<div class="footer__content">
+			<h3 class="footer__title">Products</h3>
+
+			<ul class="footer__links">
+				<li>
+					<a href="#" class="footer__link">Headphones</a>
+				</li>
+				<li>
+					<a href="#" class="footer__link">Earphones</a>
+				</li>
+				<li>
+					<a href="#" class="footer__link">Earbuds</a>
+				</li>
+				<li>
+					<a href="#" class="footer__link">Accesories</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footer__content">
+			<h3 class="footer__title">Support</h3>
+
+			<ul class="footer__links">
+				<li>
+					<a href="#" class="footer__link">Product help</a>
+				</li>
+				<li>
+					<a href="#" class="footer__link">Register</a>
+				</li>
+				<li>
+					<a href="#" class="footer__link">Updates</a>
+				</li>
+				<li>
+					<a href="#" class="footer__link">Provides</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footer__content">
+			<form action="" class="footer__form">
+				<input type="email" placeholder="Email" class="footer__input">
+				<button class="button button--flex">
+					<i class="ri-send-plane-line button__icon"></i> Subscribe
+				</button>
+			</form>
+
+			<div class="footer__social">
+				<a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+					<i class="ri-facebook-fill"></i>
+				</a>
+				<a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+					<i class="ri-instagram-line"></i>
+				</a>
+				<a href="https://twitter.com/" target="_blank" class="footer__social-link">
+					<i class="ri-twitter-line"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</footer>
+
+<a href="#" class="scrollup" id="scroll-up">
+	<i class="ri-arrow-up-s-line scrollup__icon"></i>
+</a>
+
+<!--=============== SCROLL REVEAL ===============-->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="../static/js/base.js"></script>
+
+</body>
+</html>
