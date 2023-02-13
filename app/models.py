@@ -4,27 +4,26 @@ from tinymce.models import HTMLField
 # Create your models here.
 
 USECASE_CHOICES = {
-('F', 'Food'),
-('PB','Pharmaceutical Bio'),
-('PM','Precision machine'),
-('EL','Electronics industry'),
-('FM','Facility management'),
-('WT','Water treatment'),
-('SF','Smart Farm'),
-('O','Oem'),
+('food', 'Food'),
+('pharmaceutical_Bio','Pharmaceutical_Bio'),
+('precision_machine','Precision_machine'),
+('electronics_industry','Electronics_industry'),
+('facility_management','Facility_management'),
+('water_treatment','Water_treatment'),
+('smart_Farm','Smart_Farm'),
+('oem','Oem'),
 }
 class Usecase(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
     category = models.CharField(choices=USECASE_CHOICES,max_length=50)
-    image = CloudinaryField('electronics')
+    moredetails = HTMLField()
+
 
 
 PRODUCTS_CHOICES = {
-('N', 'network'),
-('T', 'Temperature monitoring'),
-('E', 'environmental monitoring'),
-('S', 'signal conversion'),
+('network', 'network'),
+('Temperature_monitoring', 'Temperature_monitoring'),
+('environmental_monitoring', 'environmental_monitoring'),
+('signal_conversion', 'signal_conversion'),
 }
 class Product(models.Model):
     title = models.CharField(max_length=200)

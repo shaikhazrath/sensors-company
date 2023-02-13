@@ -4,7 +4,7 @@ from .models import *
 
 @admin.register(Usecase)
 class UsecaseModelAdmin(admin.ModelAdmin):
-	list_display = ['category','title']
+	list_display = ['category']
 
 @admin.register(Product)
 class ProductModelAdmin(admin.ModelAdmin):

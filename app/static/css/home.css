@@ -1,6 +1,6 @@
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-	padding: 4rem 0 2rem;
+	padding: 2rem 0 2rem;
 }
 
 .section__title {
@@ -71,7 +71,7 @@
 	color: var(--white-color);
 	padding: 1rem 1.25rem;
 	border-radius: 0.5rem;
-	transition: 0.3s;
+	transition: 0.3s;width: max-content;
 }
 
 .button:hover {
@@ -154,6 +154,7 @@
 	width: 250px;
 	position: absolute;
 	left: -7rem;
+    top: 2rem;
 }
 
 .case__description {
@@ -198,7 +199,7 @@
 
 .products__card {
 	position: relative;
-	height: 132px;
+	height: 12px;
 	background-color: var(--container-color);
 	padding: 0.75rem;
 	border-radius: 0.5rem;
@@ -206,7 +207,7 @@
 }
 
 .products__img {
-	width: 80px;
+	width: 50px;
 	position: absolute;
 	inset: 0;
 	margin-right: auto;
@@ -325,6 +326,9 @@
 		grid-template-columns: 142px;
 		justify-content: center;
 	}
+	.section_case {
+    padding: 4rem 5rem 2rem;
+}
 }
 
 /* For medium devices */
@@ -378,7 +382,7 @@
 		margin: 0;
 	}
 	.section {
-		padding: 6rem 0 2rem;
+		padding: 5rem 0 2rem;
 	}
 
 	.home__container {
@@ -427,7 +431,7 @@
 		padding: 0.85rem;
 	}
 	.products__img {
-		width: 95px;
+		width: 135px;
 	}
 
 }
@@ -452,5 +456,13 @@
 	.discount__img {
 		width: 350px;
 	}
-	
+	.case__container {
+		column-gap: 15rem;
+	}
+	.products__img {
+		height: 200px;
+		width:auto;
+	top: -5rem;
+
+	}
 }

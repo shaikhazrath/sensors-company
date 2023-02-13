@@ -92,7 +92,22 @@
 	bottom: 5rem;
 }
 
+.section {
+	padding: 2rem 0 2rem;
+}
 
+.section__title {
+	font-size: var(--bigger-font-size);
+	text-align: center;
+	margin-bottom: var(--mb-2-5);
+}
+
+.section__title-gradient {
+	background: var(--text-gradient);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
 
 @media screen and (min-width: 968px) {
 	:root {
@@ -219,15 +234,10 @@ img {
 }
 
 .nav__link {
-	color: var(--white-color);
-	font-size: var(--h2-font-size);
-	text-transform: uppercase;
-	font-weight: var(--font-semi-bold);
-	background: var(--text-gradient);
+	background: var(--white-color);
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	transition: 0.4s;
 }
 
 .nav__link:hover {
@@ -377,7 +387,7 @@ img {
 		margin: 0;
 	}
 	.section {
-		padding: 6rem 0 2rem;
+		padding: 4rem 0 2rem;
 	}
 	.nav {
 		height: calc(var(--header-height) + 1.5rem);

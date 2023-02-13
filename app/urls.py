@@ -3,8 +3,8 @@ from app import views
 urlpatterns = [
     path('about',views.About,name='about'),
     path('',views.Home,name="home"),
-    path('usecase',views.Usecases,name="usecase"),
-    path('products',views.Products,name="products"),
+    path('usecase/<str:pk>',views.Usecases,name="usecase"),
+    path('products/<str:pk>',views.Products,name="products"),
     path('productdetails/<int:pk>',views.Productdetails,name="productdetails"),
 
 

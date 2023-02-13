@@ -1,6 +1,6 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
-	navToggle = document.getElementById("nav-toggle"),
+    navToggle = document.getElementById("nav-toggle"),
 	navClose = document.getElementById("nav-close");
 
 /*===== MENU SHOW =====*/
@@ -8,6 +8,7 @@ const navMenu = document.getElementById("nav-menu"),
 if (navToggle) {
 	navToggle.addEventListener("click", () => {
 		navMenu.classList.add("show-menu");
+		console.log('hello')
 	});
 }
 
@@ -16,6 +17,8 @@ if (navToggle) {
 if (navClose) {
 	navClose.addEventListener("click", () => {
 		navMenu.classList.remove("show-menu");
+		console.log('hii')
+
 	});
 }
 
@@ -48,40 +51,23 @@ function scrollUp() {
 window.addEventListener("scroll", scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll("section[id]");
 
-function scrollActive() {
-	const scrollY = window.pageYOffset;
-
-	sections.forEach((current) => {
-		const sectionHeight = current.offsetHeight;
-		const sectionTop = current.offsetTop - 50;
-		sectionId = current.getAttribute("id");
-
-		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-			document
-				.querySelector(".nav__menu a[href*=" + sectionId + "]")
-				.classList.add("active-link");
-		} else {
-			document
-				.querySelector(".nav__menu a[href*=" + sectionId + "]")
-				.classList.remove("active-link");
-		}
-	});
-}
-window.addEventListener("scroll", scrollActive);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
 	distance: "60px",
 	duration: 2500,
-	delay: 400
-	// reset: true
+	delay: 400,
+	reset: true
 });
 
 sr.reveal(`.home__header, .section__title`, { delay: 600 });
 sr.reveal(`.home__footer`, { delay: 700 });
 sr.reveal(`.home__img`, { delay: 900, origin: "top" });
+sr.reveal(`.product-container`, { delay: 900, origin: "top" });
+
+
+
 
 sr.reveal(
 	`.sponsor__img, .products__card, .footer__logo, .footer__content, .footer__copy`,

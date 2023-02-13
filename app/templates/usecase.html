@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block css %} 
+<link rel="stylesheet" href="../static/css/usecase.css">
+{% endblock %}
+
+{% block content %} 
+
+<section class="section links">
+    <a href="food">Food</a>
+    <a href="pharmaceutical_Bio">Pharmaceutical_Bio</a>
+
+    <a href="srecision_machine">Precision_machine</a>
+
+    <a href="electronics_industry">Electronics_industry</a>
+
+    <a href="water_treatment">Water_treatment</a>
+
+    <a href="facility_management">Facility_management</a>
+    <a href="smart_Farm">Smart_Farm</a>
+    <a href="oem">oem</a>
+</section>
+
+<section class="section">
+   
+{% for u in usecase %}
+{{u.moredetails|safe}}
+
+{% endfor %}
+</section>
+{% endblock %}
