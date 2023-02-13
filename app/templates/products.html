@@ -4,10 +4,9 @@
 <link rel="stylesheet" href="../static/css/products.css">
 {% endblock %}
 {% block content %}
-<section>
-  {% for n in Network %}
-  <div class="product-contain">
-
+<section class="section">
+  <div class="product-container">
+   {% for n in Network %}
   <div class="product-card">
  <a href="{% url 'productdetails' n.id %} ">
 
@@ -19,48 +18,18 @@
 
   </div>
   <div class="product-card">
-    <a href="{% url 'productdetails' n.id %} ">
-   
-       <img src="{{n.product_img1.url}}" alt="Product Name" class="product-image">
-       <h3 class="product-name">{{n.title}}</h3>
-       <p class="product-description">{{n.short_description}} dvfdfvsdfvsdrvv</p>
-       <div class="product-price">{{n.tags}}</div>
-    </a>
-   
-     </div>
-     <div class="product-card">
-      <a href="{% url 'productdetails' n.id %} ">
-     
-         <img src="{{n.product_img1.url}}" alt="Product Name" class="product-image">
-         <h3 class="product-name">{{n.title}}</h3>
-         <p class="product-description">{{n.short_description}} dvfdfvsdfvsdrvv</p>
-         <div class="product-price">{{n.tags}}</div>
-      </a>
-     
-       </div>
-       <div class="product-card">
-        <a href="{% url 'productdetails' n.id %} ">
-       
-           <img src="{{n.product_img1.url}}" alt="Product Name" class="product-image">
-           <h3 class="product-name">{{n.title}}</h3>
-           <p class="product-description">{{n.short_description}} dvfdfvsdfvsdrvv</p>
-           <div class="product-price">{{n.tags}}</div>
-        </a>
-       
-         </div>
-         <div class="product-card">
-          <a href="{% url 'productdetails' n.id %} ">
-         
-             <img src="{{n.product_img1.url}}" alt="Product Name" class="product-image">
-             <h3 class="product-name">{{n.title}}</h3>
-             <p class="product-description">{{n.short_description}} dvfdfvsdfvsdrvv</p>
-             <div class="product-price">{{n.tags}}</div>
-          </a>
-         
-           </div>
+   <a href="{% url 'productdetails' n.id %} ">
+  
+      <img src="{{n.product_img1.url}}" alt="Product Name" class="product-image">
+      <h3 class="product-name">{{n.title}}</h3>
+      <p class="product-description">{{n.short_description}} dvfdfvsdfvsdrvv</p>
+      <div class="product-price">{{n.tags}}</div>
+   </a>
+  
+    </div>
+  {% endfor %}
       
   </div>
-  {% endfor %}
 </section>
 
       

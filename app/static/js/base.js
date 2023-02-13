@@ -64,7 +64,9 @@ const sr = ScrollReveal({
 sr.reveal(`.home__header, .section__title`, { delay: 600 });
 sr.reveal(`.home__footer`, { delay: 700 });
 sr.reveal(`.home__img`, { delay: 900, origin: "top" });
-sr.reveal(`.product-container`, { delay: 900, origin: "top" });
+sr.reveal(`.product-container`, { delay: 600, origin: "top" });
+sr.reveal(`.card-wrapper`, { delay: 600, origin: "top" });
+
 
 
 

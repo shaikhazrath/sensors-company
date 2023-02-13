@@ -1,36 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-body{
-    line-height: 1.5;
-}
 .moredetails{
-    display: flex;
+    display:flex ;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.moredetails-title{
-    font-size: 3rem;
-    text-transform: capitalize;
-    font-weight: 700;
-    position: relative;
-    color: #ffffff;
-    margin: 1rem 0;
+
+.sec{
+    padding-top: 2rem;
 }
+
 .card-wrapper{
     max-width: 1100px;
     margin: 0 auto;
-
-
 }
-
-.section img{
+img{
     width: 100%;
     display: block;
 }
@@ -118,7 +101,7 @@ body{
 }
 .product-detail h2{
     text-transform: capitalize;
-    color: #ffffff;
+    color: #f6f6f6;
     padding-bottom: 0.6rem;
 }
 .product-detail p{
@@ -167,7 +150,7 @@ body{
     background: #256eff;
 }
 .purchase-info .btn:last-of-type{
-    background: #478bf6;
+    background: #f64749;
 }
 .purchase-info .btn:hover{
     opacity: 0.9;
@@ -203,6 +186,7 @@ body{
         grid-gap: 1.5rem;
     }
     .card-wrapper{
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -213,8 +197,6 @@ body{
         justify-content: center;
     }
     .product-content{
-        padding-top: 5rem;
+        padding-top: 0;
     }
-  
-  
 }
