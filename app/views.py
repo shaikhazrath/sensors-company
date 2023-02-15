@@ -30,3 +30,7 @@ def Productdetails(request,pk):
     product = Product.objects.get(pk=pk)
 
     return render(request , 'productdetails.html', {'product': product})
+
+
+def Contact(request):
+    return render(request , 'contact.html')
