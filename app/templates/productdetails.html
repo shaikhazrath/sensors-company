@@ -71,7 +71,7 @@
         </div>
   
         <div class = "purchase-info">
-          <button type = "button" class = "btn">contact</button>
+          <button type = "button" class = "btn" onclick="location.href='/contact'">contact</button>
           
   
      
@@ -79,7 +79,10 @@
     </div>
   </div>
 </section>
-<section class="moredetails">
+<section class="moredetails" style="  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;">
   <h1 class="moredetails-title" >more details</h1>
   {{product.moredetails|safe}}
 </section>

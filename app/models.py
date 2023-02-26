@@ -40,3 +40,10 @@ class Product(models.Model):
 
     def __str__(self):
         return str(self.title)
+
+class Contact(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=254)
+    phone = models.BigIntegerField()
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)

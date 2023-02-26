@@ -7,11 +7,11 @@
 	--hue-color: 206;
 	--black-color: hsl(var(--hue-color), 4%, 4%);
 	--black-color-alt: hsl(var(--hue-color), 4%, 8%);
-	--title-color: hsl(var(--hue-color), 4%, 95%);
-	--text-color: hsl(var(--hue-color), 4%, 75%);
-	--text-color-light: hsl(var(--hue-color), 4%, 65%);
+	--title-color: black;
+	--text-color:black;
+	--text-color-light: black;
 	--white-color: #fff;
-	--body-color: hsl(var(--hue-color), 4%, 6%);
+	--body-color: #fff;
 	--container-color: hsl(var(--hue-color), 4%, 10%);
 	--text-gradient: linear-gradient(
 		hsl(var(--hue-color), 4%, 24%),
@@ -26,7 +26,7 @@
 	--big-font-size: 2.5rem;
 	--h2-font-size: 1.25rem;
 	--h3-font-size: 1.125rem;
-	--normal-font-size: 0.938rem;
+	--normal-font-size: 1.198rem;
 	--small-font-size: 0.813rem;
 	--smaller-font-size: 0.75rem;
 	--text-line-height: 2rem;
@@ -137,14 +137,14 @@ body {
 	margin: var(--header-height) 0 0 0;
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
-	background-color: var(--body-color);
+	background: white;
 	color: var(--text-color);
 }
 
 h1,
 h2,
 h3 {
-	color: var(--title-color);
+	color: black;
 }
 
 ul {
@@ -152,6 +152,7 @@ ul {
 }
 
 a {
+	color: black;
 	text-decoration: none;
 }
 
@@ -199,6 +200,8 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	color: black;
+
 }
 
 .nav__logo {
@@ -217,7 +220,7 @@ img {
 @media screen and (max-width: 767px) {
 	.nav__menu {
 		position: fixed;
-		background-color: var(--body-color);
+		background-color: hsl(0, 0%, 100%);
 		top: -100%;
 		left: 0;
 		width: 100%;
@@ -231,18 +234,19 @@ img {
 	flex-direction: column;
 	align-items: center;
 	row-gap: 1rem;
+	color: black;
 }
 
 .nav__link {
 	background: var(--white-color);
-	color: transparent;
+	color: black;
 	-webkit-background-clip: text;
 	background-clip: text;
 }
 
 .nav__link:hover {
 	background: var(--white-color);
-	color: transparent;
+	color: black;
 	-webkit-background-clip: text;
 	background-clip: text;
 }
@@ -269,7 +273,7 @@ img {
 /* Active link */
 .active-link {
 	background: var(--white-color);
-	color: transparent;
+	color: black;
 	-webkit-background-clip: text;
 	background-clip: text;
 }
@@ -400,8 +404,9 @@ img {
 		column-gap: 3.5rem;
 	}
 	.nav__link {
-		font-size: var(--normal-font-size);
-		text-transform: initial;
+text-transform: initial;
+color: black;
+font-weight: bold;
 	}
 	.nav__toggle,
 	.nav__close {

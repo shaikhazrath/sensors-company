@@ -46,6 +46,7 @@
 .home__subtitle {
 	font-size: var(--big-font-size);
 	margin-bottom: var(--mb-2-5);
+	color: black;
 }
 
 .home__title-description {
@@ -57,6 +58,8 @@
 .home__description {
 	margin-bottom: var(--mb-2-5);
 	line-height: var(--text-line-height);
+	color: var(--title-color);
+
 }
 
 .home__price {
@@ -134,6 +137,7 @@
 }
 
 .specs__img {
+	
 	width: 250px;
 	position: absolute;
 	top: 2rem;
@@ -151,10 +155,9 @@
 }
 
 .case__img {
-	width: 250px;
-	position: absolute;
 	left: -7rem;
     top: 2rem;
+	
 }
 
 .case__description {
@@ -407,6 +410,8 @@
 	}
 	.case__description {
 		margin-bottom: var(--mb-2);
+		font-size: 20px;
+font-weight: bold;
 	}
 	.discount__container {
 		grid-template-columns: 250px max-content;
@@ -457,7 +462,7 @@
 		width: 350px;
 	}
 	.case__container {
-		column-gap: 15rem;
+		column-gap: 7rem;
 	}
 	.products__img {
 		height: 200px;

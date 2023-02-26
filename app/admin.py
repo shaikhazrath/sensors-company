@@ -9,3 +9,7 @@ class UsecaseModelAdmin(admin.ModelAdmin):
 @admin.register(Product)
 class ProductModelAdmin(admin.ModelAdmin):
 	list_display = ['category','title']
+
+@admin.register(Contact)
+class ContactModelAdmin(admin.ModelAdmin):
+	list_display = ['name','email','created_at']
