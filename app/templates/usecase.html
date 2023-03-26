@@ -50,12 +50,17 @@
   </ul>
 </nav>
 
-<div  style="padding:4rem;margin:rem;">
-  {% for u in page_obj  %}
-  {{u.title}}
-  {{u.moredetails|safe}}
-  {% endfor %}
+<div style="display:flex;justify-content:center;align-items: center; padding:40px">
+  <div style="text-align:center;">
+    {% for u in page_obj  %}
+      <img src="{{u.image.url}}" alt="Product Name" style="max-width:100%; height:auto; margin-bottom:1rem;">
+      <h1 style="text-align:center;"> {{u.title}} </h1>
+      <p> {{u.description}} </p>
+    {% endfor %}
+  </div>
 </div>
+
+
 
 <div class="pagination" style="display:flex;justify-content:center">
   <span class="step-links">

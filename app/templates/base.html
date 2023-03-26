@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+	
     {% block css %} {% endblock %}
 
     <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
@@ -23,9 +24,15 @@
                     <li class="nav__item">
                         <a href="/" class="nav__link active-link ">Home</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="/products/network" class="nav__link  active-link">Products</a>
-                    </li>
+					<li class="nav__item">
+						<a href="/" class="nav__link  active-link">Products</a>
+						<div class="dropdown">
+							<div id="company-list">
+								<!-- This will be populated dynamically with company names -->
+							  </div>
+						  
+						</div>
+					</li>
                     <li class="nav__item">
                         <a href="/usecase/food" class="nav__link  active-link">UseCase</a>
                     </li>
@@ -109,5 +116,24 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="../static/js/base.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $.ajax({
+    url: "/companys/",
+    type: "GET",
+    dataType: "json",
+    success: function(response) {
+      var companies = response.comp;
+      var companyList = $("#company-list");
+      for (var i = 0; i < companies.length; i++) {
+        var company = companies[i];
+        companyList.append('<a class="dropdown-item" href="/products/' + company.id + '">' + company.name + '</a>');
+
+      }
+    }
+  });
+});
+</script>
 </body>
 </html>

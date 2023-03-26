@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 from .models import *
+from django.http import JsonResponse
 from django.core.paginator import Paginator
 # Create your views here.
 from .form import ContactForm
@@ -9,15 +10,14 @@ def Home(request):
     return render(request, 'home.html')
 
 
-def Usecases(request, pk):
-    usecase_list = Usecase.objects.filter(category=pk)
+def Usecase(request, pk):
+    usecase_list = Usecases.objects.filter(category=pk)
     paginator = Paginator(usecase_list, 10)  # Show 10 usecases per page
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
     return render(request, 'usecase.html', {'page_obj': page_obj})
-
 
 def Products(request,pk):
     print(pk)
@@ -37,6 +37,9 @@ def Products(request,pk):
     }
     return render(request, 'products.html', context)
 
+def Companys(request):
+    comp = Company.objects.all().values('id','name')
+    return JsonResponse({'comp': list(comp)})
 
 def About(request):
     return render(request , 'about.html')
